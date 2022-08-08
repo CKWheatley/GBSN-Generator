@@ -1,0 +1,97 @@
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html .hidden {
+  display: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body header {
+  padding: 1vh 1vw;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: orange;
+}
+
+body main section {
+  background-color: #ffa76d;
+  width: 88vw;
+  margin: 15px auto;
+  padding: 1vh 1vw;
+  border-radius: 20px;
+}
+
+body main section div {
+  width: 90%;
+  margin: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body main section div label {
+  display: block;
+  width: 20%;
+}
+
+body main section div input, body main section div textarea, body main section div select {
+  width: 80%;
+  padding: 0.5em;
+  font-size: 1.2em;
+  border: none;
+  max-width: 80%;
+}
+
+body main section div span {
+  display: block;
+  background-color: beige;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: 80%;
+  border-radius: 0;
+}
+
+body main section div span p {
+  font-size: 1.2em;
+}
+
+body main section div span button {
+  padding: 1em;
+  width: 90%;
+  margin: 15px 5%;
+}
+/*# sourceMappingURL=styles.css.map */

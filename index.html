@@ -3,18 +3,89 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Untitled Document</title>
+<title>GBSNG</title>
+<!-- Create a favicon -->
 <link href="styles.css" rel="stylesheet" type="text/css">
 <link href="shortcuts.css" rel="stylesheet" type="text/css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </head>
-
+<!-- add dpa checker -->
 <body>
-	<header></header>
-	<main></main>
-	<footer></footer>
+	<header>
+		<h1>GBSN-Generator</h1>
+	</header>
+	<main>
+		<section>
+			<div id="contact-type">
+				<label>Contact Type</label>
+				<select>
+					<option>Call</option>
+					<option>Email</option>
+				</select>
+			</div>
+			<div id="title">
+				<label>Title (Call Topic):</label>
+				<input list="gbsn-title-list">
+				<datalist id="gbsn-title-list">
+					<option>Order LPG</option>
+					<option>Engineering Issue</option>
+					<option>Invoice Error</option>
+					<option>Complaint</option>
+				</datalist>
+			</div>
+			<div id="contact-name">
+				<label>Caller's Full Name:</label>
+				<input>
+			</div>
+			<div id="contact-details">
+				<label>Contact Number:</label>
+				<input>
+			</div>
+			<div id="summary">
+				<label>Summary:</label>
+				<textarea></textarea>
+			</div>
+			<div id="action-required">
+				<label>Action Required:</label>
+				<input>
+				<!-- Could add task to be raised and when its clicked it generates task type automatically etc.-->
+			</div>
+			<div id="follow-up-required">
+				<label>Follow Up Required:</label>
+				<input>
+			</div>
+			<div>
+				<label>Generated description:</label>
+				<span>
+					<p id="gen-text">
+						
+					</p>
+					<!--<button id="copy">Copy</button>-->
+				</span>
+			</div>
+		</section>
+		<!--
+		<section>
+			<div>
+				<label>Title</label>
+				<input list="case-task">
+				<datalist id="case-task">
+					<option>Case</option>
+					<option>Task</option>
+				</datalist>
+			</div>
+			<div>
+				<label id=""></label>
+			</div>
+		</section>
+		-->
+
+	</main>
+	<footer>
+
+	</footer>
 </body>
 <script src="functions.js"></script>
 </html>
