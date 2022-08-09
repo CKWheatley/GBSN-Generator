@@ -45,15 +45,20 @@ body{
                 }
                 input, textarea, select{
                     width: 80%;
-                    padding: 0.5em;
                     font-size: 1.2em;
+                    padding: 10px 0;
                     border: none;
                     max-width: 80%;
+                    min-width: 80%;
                 }
                 span{
                     @include c-box(block, beige, max-content, 80%, 0)
-                    p{
+                    textarea{
                         font-size: 1.2em;
+                        width: 100%;
+                        max-width: 100%;
+                        min-width: 100%;
+                        height: auto;
                     }
                     button{
                         padding: 1em;

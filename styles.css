@@ -69,10 +69,11 @@ body main section div label {
 
 body main section div input, body main section div textarea, body main section div select {
   width: 80%;
-  padding: 0.5em;
   font-size: 1.2em;
+  padding: 10px 0;
   border: none;
   max-width: 80%;
+  min-width: 80%;
 }
 
 body main section div span {
@@ -85,8 +86,12 @@ body main section div span {
   border-radius: 0;
 }
 
-body main section div span p {
+body main section div span textarea {
   font-size: 1.2em;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  height: auto;
 }
 
 body main section div span button {

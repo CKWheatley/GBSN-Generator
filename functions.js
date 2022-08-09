@@ -30,40 +30,50 @@ select.change(() => {
     }
 })
 
-input.change(() => {
+function update(){
     if(type.find(select).val() == "Call"){
         template.html(`
         ${contact_name.find(label).html()} ${contact_name.find(input).val()}
-        <br>
         ${details.find(label).html()} ${details.find(input).val()}
-        <br>
         ${summary.find(label).html()} ${summary.find(textarea).val()}
-        <br>
         ${action.find(label).html()} ${action.find(input).val()}
-        <br>
         ${follow.find(label).html()} ${follow.find(input).val()}
         `)
-    }else{
+    }
+    else{
         template.html(`
         ${contact_name.find(label).html()} ${contact_name.find(input).val()}
-        <br>
         ${summary.find(label).html()} ${summary.find(textarea).val()}
-        <br>
         ${action.find(label).html()} ${action.find(input).val()}
-        <br>
         ${follow.find(label).html()} ${follow.find(input).val()}
         `)
     }
     
+}
+input.change(() => {
+    update()
+
+})
+textarea.change(() => {
+    update()
 })
 
-/*
-function copy(){
-    template.select()
+
+function copy(value){
+    value.select()
     document.execCommand("copy");
 }
 
 $("#copy").click(() => {
-    copy()
+    copy(template)
 })
+/*
+$(template).each(function () {
+    this.setAttribute("style", "height:" + (this.scrollHeight) + "px;overflow-y:hidden;");
+  }).on("input", function () {
+    this.style.height = "auto";
+    this.style.height = (this.scrollHeight) + "px";
+  });
+
+https://stackoverflow.com/questions/454202/creating-a-textarea-with-auto-resize
 */
