@@ -32,20 +32,18 @@ select.change(() => {
 
 function update(){
     if(type.find(select).val() == "Call"){
-        template.html(`
-        ${contact_name.find(label).html()} ${contact_name.find(input).val()}
-        ${details.find(label).html()} ${details.find(input).val()}
-        ${summary.find(label).html()} ${summary.find(textarea).val()}
-        ${action.find(label).html()} ${action.find(input).val()}
-        ${follow.find(label).html()} ${follow.find(input).val()}
+        template.html(`${contact_name.find(label).html()} ${contact_name.find(input).val()}
+${details.find(label).html()} ${details.find(input).val()}
+${summary.find(label).html()} ${summary.find(textarea).val()}
+${action.find(label).html()} ${action.find(input).val()}
+${follow.find(label).html()} ${follow.find(input).val()}
         `)
     }
     else{
-        template.html(`
-        ${contact_name.find(label).html()} ${contact_name.find(input).val()}
-        ${summary.find(label).html()} ${summary.find(textarea).val()}
-        ${action.find(label).html()} ${action.find(input).val()}
-        ${follow.find(label).html()} ${follow.find(input).val()}
+        template.html(`${contact_name.find(label).html()} ${contact_name.find(input).val()}
+${summary.find(label).html()} ${summary.find(textarea).val()}
+${action.find(label).html()} ${action.find(input).val()}
+${follow.find(label).html()} ${follow.find(input).val()}
         `)
     }
     
