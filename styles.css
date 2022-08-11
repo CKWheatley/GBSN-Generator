@@ -8,6 +8,10 @@ html .hidden {
   display: none;
 }
 
+html h2 {
+  margin: 30px auto;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -31,7 +35,7 @@ body header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: orange;
+  background-color: #ffa76d;
 }
 
 body main section {
@@ -76,27 +80,78 @@ body main section div input, body main section div textarea, body main section d
   min-width: 80%;
 }
 
+body main section div:last-of-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: c-flex-center-vnh;
+      -ms-flex-align: c-flex-center-vnh;
+          align-items: c-flex-center-vnh;
+  width: 95%;
+  margin: 0 auto;
+}
+
 body main section div span {
-  display: block;
-  background-color: beige;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: grey;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  width: 80%;
+  width: 100%;
   border-radius: 0;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body main section div span textarea {
   font-size: 1.2em;
-  width: 100%;
-  max-width: 100%;
-  min-width: 100%;
-  height: auto;
+  width: 30%;
+  max-width: 30%;
+  min-width: 30%;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  height: 20em;
+  border: grey solid 5px;
+  resize: none;
+}
+
+@media only screen and (max-width: 800px) {
+  body main section div span textarea:focus {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 50vw;
+    min-width: 50vw;
+    max-width: 50vw;
+  }
 }
 
 body main section div span button {
   padding: 1em;
-  width: 90%;
+  width: 33%;
   margin: 15px 5%;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -18,6 +18,9 @@ html{
     .hidden{
         display: none;
     }
+    h2{
+        margin: 30px auto;
+    }
 }
 body{
     padding: 0;
@@ -26,8 +29,9 @@ body{
         padding: 1vh 1vw;
         margin-bottom: 30px;
         @include c-flex()
-        background-color: orange;
+        background-color: rgb(255, 167, 109);
     }
+
     main{
         section{
             background-color: rgb(255, 167, 109);
@@ -51,18 +55,37 @@ body{
                     max-width: 80%;
                     min-width: 80%;
                 }
+                &:last-of-type{
+                    @include c-flex(column, center, center, c-flex-center-vnh);
+                    width: 95%;
+                    margin: 0 auto;
+                }
                 span{
-                    @include c-box(block, beige, max-content, 80%, 0)
+                    @include c-box(flex, grey, max-content, 100%, 0)
+                    @include c-flex()
                     textarea{
                         font-size: 1.2em;
-                        width: 100%;
-                        max-width: 100%;
-                        min-width: 100%;
-                        height: auto;
+                        width: 30%;
+                        max-width: 30%;
+                        min-width: 30%;
+                        min-height: fit-content;
+                        height: 20em;
+                        border: grey solid 5px;
+                        resize: none;
+                        @include c-respond(all-mobile){
+                            &:focus{
+                                position: fixed;
+                                bottom: 0;
+                                left: 0;
+                                width: 50vw;
+                                min-width: 50vw;
+                                max-width: 50vw
+                            }
+                        }
                     }
                     button{
                         padding: 1em;
-                        width: 90%;
+                        width: 33%;
                         margin: 15px 5%;
                     }
                 }
