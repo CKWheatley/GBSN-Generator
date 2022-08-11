@@ -37,14 +37,17 @@ ${details.find(label).html()} ${details.find(input).val()}
 ${summary.find(label).html()} ${summary.find(textarea).val()}
 ${action.find(label).html()} ${action.find(input).val()}
 ${follow.find(label).html()} ${follow.find(input).val()}
-        `)
+`)
+// if action and follow is empty then dont populate.
+// add if form condition
+// complete crm task notes thing
     }
     else{
         template.html(`${contact_name.find(label).html()} ${contact_name.find(input).val()}
 ${summary.find(label).html()} ${summary.find(textarea).val()}
 ${action.find(label).html()} ${action.find(input).val()}
 ${follow.find(label).html()} ${follow.find(input).val()}
-        `)
+`)
     }
     
 }
