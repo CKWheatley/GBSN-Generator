@@ -1,4 +1,6 @@
-// JavaScript Document
+// add code to generate templates based on title selection.
+
+
 
 var type = $("#contact-type")
 var title = $("#title")
@@ -23,9 +25,15 @@ select.change(() => {
         contact_name.find(label).html("Caller's Full Name:")
         details.find(label).html("Contact Number:")
         details.removeClass("hidden")
-    }else{
+    }else if(type.find(select).val() == "Email"){
         title.find(label).html(" Title (Email Topic):")
         contact_name.find(label).html("Contacts Full Name:")
+        details.addClass("hidden")
+        details.find(label).html("")
+        details.find(input).val("")
+    }else{
+        title.find(label).html(" Title (Form Type):")
+        contact_name.find(label).html("Name on form")
         details.addClass("hidden")
         details.find(label).html("")
         details.find(input).val("")
@@ -70,13 +78,13 @@ function copy(value){
     document.execCommand("copy");
 }
 
-$("#desc-copy").click(() => {
+$(desc_template).click(() => {
     copy(desc_template)
 })
-$("#title-copy").click(() => {
+$(title_template).click(() => {
     copy(title_template)
 })
-$("#action-copy").click(() => {
+$(action_template).click(() => {
     copy(action_template)
 })
 

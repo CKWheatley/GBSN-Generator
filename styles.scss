@@ -72,6 +72,7 @@ body{
                         height: 20em;
                         border: grey solid 5px;
                         resize: none;
+                        
                         @include c-respond(all-mobile){
                             &:focus{
                                 position: fixed;
@@ -82,11 +83,6 @@ body{
                                 max-width: 50vw
                             }
                         }
-                    }
-                    button{
-                        padding: 1em;
-                        width: 33%;
-                        margin: 15px 5%;
                     }
                 }
             }
